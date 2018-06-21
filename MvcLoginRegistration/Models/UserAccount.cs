@@ -18,7 +18,7 @@ namespace MvcLoginRegistration.Models
         public string LastName { get; set; }
 
         [Required(ErrorMessage ="Email is required.")]
-        //[RegularExpression("^(?("")("".+?""@)|(([0-9a-zA-Z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-zA-Z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,6}))$", ErrorMessage ="Please Enter a valid email address.")]
+        [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", ErrorMessage ="Please Enter a valid email address.")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "UserName is required.")]
@@ -29,6 +29,7 @@ namespace MvcLoginRegistration.Models
         public string Password { get; set; }
 
         [Compare("Password", ErrorMessage ="Password do not match.")]
+        [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
     }
 }

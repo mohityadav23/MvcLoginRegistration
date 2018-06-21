@@ -18,32 +18,24 @@
                 </button>
                 @Html.ActionLink("Mendax Inc.", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">                    
+            <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Details", "Index", "Account")</li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Register
-                        <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Admin", "Register", "Account")
-                            <li>@Html.ActionLink("Customers", "Register", "Account")</li>
-                        </ul>
-                    </li>
+                    <li>@Html.ActionLink("Register", "Register", "Account")</li>
                 </ul>
+
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Register
+                            Login
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Admin", "Register", "Account")
-                            <li>@Html.ActionLink("Customers", "Register", "Account")</li>
+                            <li>@Html.ActionLink("Customer Login", "Login", "Account")</li>
+                            <li>@Html.ActionLink("Admin Login", "Login", "Account")</li>
                         </ul>
                     </li>
-                    <li>@Html.ActionLink("Customer Login" , "Login", "Account")</li>
-                    <li>@Html.ActionLink("Cus"
-                       Login", "Account")</li>
+
                 </ul>
             </div>
         </div>
